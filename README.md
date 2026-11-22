@@ -11,7 +11,7 @@ A multi-page personal website in plain HTML, CSS, and JavaScript. It is intentio
 - `achievements.html` — achievements
 - `facts.html` — interesting facts
 - `styles.css` — all colors, fonts, spacing, layout, image placeholders, and animations
-- `site.js` — active navigation, mobile menu, scroll reveal, and 1.5-second page transitions
+- `site.js` — active navigation, mobile menu, 1.5-second page fades, and 1.5-second scroll reveals that slide content down from above
 
 ## Quick edits
 
@@ -19,7 +19,7 @@ A multi-page personal website in plain HTML, CSS, and JavaScript. It is intentio
    - `--color-red: #460404;` is the moonlight red background.
    - `--color-ink` controls the main text color.
    - `--font-display` and `--font-body` control the typefaces.
-   - `--space-*` and `--reveal-time` control spacing and animation timing.
+   - `--space-*` controls spacing, and `--reveal-time: 1.5s` controls both the page fade and the scroll fade/slide timing.
 2. Open any page and replace the sample text directly in the HTML.
 3. Replace an image placeholder by swapping the `<figure class="image-slot ...">...</figure>` block with an image, for example:
 

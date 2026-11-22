@@ -209,15 +209,15 @@ h1 em, h2 em, h3 em { color: var(--color-red-light); font-style: italic; }
 
 .site-footer { width: min(calc(100% - 4rem), var(--max-width)); margin: 0 auto; padding: 1.4rem 0; display: flex; justify-content: space-between; gap: 1rem; color: var(--color-muted); font-size: .62rem; letter-spacing: .11em; text-transform: uppercase; }
 
-.reveal { opacity: 0; transform: translateY(2rem); transition: opacity var(--reveal-time) var(--ease), transform var(--reveal-time) var(--ease); }
-.reveal.is-visible { opacity: 1; transform: translateY(0); }
+.reveal { opacity: 0; transform: translate3d(0, -2rem, 0); will-change: opacity, transform; transition: opacity var(--reveal-time) var(--ease), transform var(--reveal-time) var(--ease); }
+.reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
 .reveal-delay-1 { transition-delay: .14s; }
 .reveal-delay-2 { transition-delay: .28s; }
 .reveal-delay-3 { transition-delay: .42s; }
-.page-shell { animation: pageEnter var(--reveal-time) var(--ease) both; }
-body.page-leave .page-shell { animation: pageLeave var(--reveal-time) var(--ease) both; }
-@keyframes pageEnter { from { opacity: 0; transform: translateY(1.2rem); } to { opacity: 1; transform: none; } }
-@keyframes pageLeave { from { opacity: 1; transform: none; } to { opacity: 0; transform: translateY(-1.2rem); } }
+.page-shell { animation: pageFadeIn var(--reveal-time) var(--ease) both; }
+body.page-leave .page-shell { animation: pageFadeOut var(--reveal-time) var(--ease) both; }
+@keyframes pageFadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes pageFadeOut { from { opacity: 1; } to { opacity: 0; } }
 
 @media (max-width: 850px) {
   .site-header, .page-shell, .site-footer { width: min(calc(100% - 2.5rem), var(--max-width)); }
