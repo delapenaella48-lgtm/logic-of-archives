@@ -1,5 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
   const page = document.body.dataset.page;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const pageDuration = 1500;
+  let isNavigating = false;
+
+  // Start each page behind the transition layer, then fade it into view.
+  window.requestAnimationFrame(() => document.body.classList.add('page-ready'));
+  window.addEventListener('pageshow', () => {
+    document.body.classList.remove('page-leave');
+    document.body.classList.add('page-ready');
+  });
+
   const navLink = document.querySelector(`[data-nav="${page}"]`);
   if (navLink) {
     navLink.classList.add('is-active');
@@ -49,10 +60,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const isInternal = url.origin === window.location.origin;
     if (!isInternal || isSamePage || link.target === '_blank') return;
     link.addEventListener('click', (event) => {
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      if (isNavigating) {
+        event.preventDefault();
+        return;
+      }
+      if (prefersReducedMotion) return;
       event.preventDefault();
+      isNavigating = true;
       document.body.classList.add('page-leave');
-      window.setTimeout(() => { window.location.href = link.href; }, 1500);
+      document.body.setAttribute('aria-busy', 'true');
+      window.setTimeout(() => { window.location.href = link.href; }, pageDuration);
     });
   });
 });

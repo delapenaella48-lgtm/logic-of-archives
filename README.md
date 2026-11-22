@@ -11,7 +11,7 @@ A multi-page personal website in plain HTML, CSS, and JavaScript. It is intentio
 - `achievements.html` — achievements
 - `facts.html` — interesting facts
 - `styles.css` — all colors, fonts, spacing, layout, image placeholders, and animations
-- `site.js` — active navigation, mobile menu, 1.5-second page fades, and 1.5-second scroll reveals that slide content down from above
+- `site.js` — active navigation, mobile menu, full-page 1.5-second fades when switching pages, and 1.5-second scroll reveals that slide content down from above
 
 ## Quick edits
 
