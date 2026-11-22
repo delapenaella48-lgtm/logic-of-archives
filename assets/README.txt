@@ -1,0 +1,1 @@
+This folder is intentionally ready for your images. Add files such as `portrait.jpg`, `favorite-place.jpg`, or `project-detail.png` here, then update the image placeholder blocks in the page HTML as described in the root README.md.
