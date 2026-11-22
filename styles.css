@@ -220,6 +220,8 @@ h1 em, h2 em, h3 em { color: var(--color-red-light); font-style: italic; }
 .fact-card--tall p { color: rgba(70,4,4,.65); max-width: 16rem; }
 
 .site-footer { width: min(calc(100% - 4rem), var(--max-width)); margin: 0 auto; padding: 1.4rem 0; display: flex; justify-content: space-between; gap: 1rem; color: var(--color-muted); font-size: .62rem; letter-spacing: .11em; text-transform: uppercase; }
+.footer-edit-link { color: var(--color-ink); border-bottom: 1px solid var(--color-red-light); transition: color .3s ease, border-color .3s ease; }
+.footer-edit-link:hover { color: var(--color-red-light); border-color: var(--color-ink); }
 
 .reveal { opacity: 0; transform: translate3d(0, -2rem, 0); will-change: opacity, transform; transition: opacity var(--reveal-time) var(--ease), transform var(--reveal-time) var(--ease); }
 .reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }

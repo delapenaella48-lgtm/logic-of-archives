@@ -32,6 +32,21 @@ A multi-page personal website in plain HTML, CSS, and JavaScript. It is intentio
    Add your images in a new `assets` folder. There are two editable image slots on each inner page.
 4. Keep all files in the same folder so the navigation continues to work.
 
+## Edit online
+
+The live site is backed by the public GitHub repository:
+
+`https://github.com/delapenaella48-lgtm/logic-of-archives`
+
+To edit it in your browser:
+
+1. Open the repository and sign in to GitHub with the connected account.
+2. Open the file you want to change, such as `about.html` for page text or `styles.css` for colors, fonts, spacing, and animations.
+3. Click the pencil icon, make your edits, then choose **Commit changes**.
+4. GitHub Pages automatically republishes the live site after the commit finishes. It may take a minute or two to update.
+
+The **Edit site ↗** link in the footer of every page opens this repository.
+
 ## Run locally
 
 From this folder, use any static server. For example:
